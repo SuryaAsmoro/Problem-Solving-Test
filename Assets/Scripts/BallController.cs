@@ -15,10 +15,15 @@ public class BallController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        //rb.AddForce(ballAngle.normalized * ballSpeed);
+        rb.AddForce(ballAngle.normalized * ballSpeed);
     }
 
     private void Update()
+    {
+        
+    }
+
+    void MoveBallByMouse()
     {
         Vector3 target = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1));
         Vector3 moveAngle = target - transform.position;
