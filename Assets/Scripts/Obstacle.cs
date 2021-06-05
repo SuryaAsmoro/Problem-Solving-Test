@@ -10,16 +10,11 @@ public class Obstacle : MonoBehaviour
     private float minSize = 0.2f;
     private float maxSize = 1.0f;
 
-    private void Start()
+    void RandomizeShape()
     {
         sprite = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
 
-        RandomizeShape();
-    }
-
-    void RandomizeShape()
-    {
         float width = Random.Range(minSize, maxSize);
         float height = Random.Range(minSize, maxSize);
 
@@ -33,7 +28,11 @@ public class Obstacle : MonoBehaviour
         {
             ScoreManager.Instance.IncrementScore();
             this.gameObject.SetActive(false);
-            Destroy(this.gameObject, 1);
         }
+    }
+
+    private void OnEnable()
+    {
+        RandomizeShape();
     }
 }
