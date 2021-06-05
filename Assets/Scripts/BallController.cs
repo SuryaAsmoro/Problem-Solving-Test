@@ -16,5 +16,4 @@ public class BallController : MonoBehaviour
 
         rb.AddForce(ballAngle.normalized * ballSpeed);
     }
-
 }
