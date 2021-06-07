@@ -55,7 +55,7 @@ public class UIManager : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(4);
     }
 
     public void MainMenu()

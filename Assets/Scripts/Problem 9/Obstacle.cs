@@ -64,7 +64,10 @@ public class Obstacle : MonoBehaviour
         if (collision.gameObject.tag == "Ball")
         {
             ScoreManager.Instance.IncrementScore();
-            AudioManager.Instance.Play("Scored");
+
+            if (FindObjectOfType<AudioManager>() != null)
+                AudioManager.Instance.Play("Scored");
+
             StartCoroutine(BoxDissappear(DeactivateObject));
         }
     }
@@ -73,7 +76,10 @@ public class Obstacle : MonoBehaviour
     {
         RandomizeShape();
         RandomizeRotateSpeed();
-        AudioManager.Instance.Play("BoxAppear");
+
+        if (FindObjectOfType<AudioManager>() != null) 
+            AudioManager.Instance.Play("BoxAppear");
+
         StartCoroutine(BoxAppear());
     }
 

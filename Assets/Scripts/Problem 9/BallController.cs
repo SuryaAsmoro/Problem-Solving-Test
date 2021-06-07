@@ -43,8 +43,8 @@ public class BallController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Box")
-
-            AudioManager.Instance.Play("Impact");
+            if (FindObjectOfType<AudioManager>() != null) 
+                AudioManager.Instance.Play("Impact");
     }
 
     Color ColorTransition()
