@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 1407405833}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,7 +461,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!212 &1407405831
 SpriteRenderer:
@@ -537,8 +537,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5c5702ac3c82e438c2d4135deab124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 519420031}
   ballAngle: {x: 1, y: 1}
-  ballSpeed: 500
+  ballSpeed: 10
+  gravitationalForce: 500
+  redColor: 255
+  greenColor: 100
+  blueColor: 100
 --- !u!58 &1407405834
 CircleCollider2D:
   m_ObjectHideFlags: 0

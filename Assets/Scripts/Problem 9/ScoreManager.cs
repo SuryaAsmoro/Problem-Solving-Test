@@ -24,6 +24,14 @@ public class ScoreManager : MonoBehaviour
     private static int score;
     public Text scoreText;
 
+    public static int Score
+    {
+        get
+        {
+            return score;
+        }
+    }
+
     private void Awake()
     {
         score = 0;
@@ -31,12 +39,12 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
-        scoreText.text = "Score : " + score;
+        scoreText.text = "Score: " + score;
     }
 
     public void IncrementScore()
     {
-        score++;
+        score += 100;
     }
 
 

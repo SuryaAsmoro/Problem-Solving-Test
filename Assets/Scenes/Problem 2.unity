@@ -309,8 +309,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5c5702ac3c82e438c2d4135deab124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
   ballAngle: {x: 1, y: 1}
-  ballSpeed: 500
+  ballSpeed: 10
+  gravitationalForce: 500
+  redColor: 255
+  greenColor: 100
+  blueColor: 100
 --- !u!58 &1407405834
 CircleCollider2D:
   m_ObjectHideFlags: 0
